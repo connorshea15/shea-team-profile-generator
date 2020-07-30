@@ -6,10 +6,10 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^26.2.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },
