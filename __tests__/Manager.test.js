@@ -9,8 +9,14 @@ test('create a manager object', () => {
     expect(manager.officeNumber).toBe('43');
 });
 
-test('create a manager object', () => {
+test('gets the managers name', () => {
     const manager = new Manager('Mike', '43', 'mikesemail', '43');
 
     expect(manager.getName).toHaveProperty('name');
+});
+
+test('gets the managers id', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+
+    expect(manager.getId).toHaveProperty('id');
 });
