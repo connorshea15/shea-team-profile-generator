@@ -23,3 +23,8 @@ test('gets the managers email', () => {
     const manager = new Manager('Mike', '43', 'mikesemail', '43');
     expect(manager.getEmail()).toBe('mikesemail');
 });
+
+test('gets the managers role', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getRole()).toBe('manager');
+});
