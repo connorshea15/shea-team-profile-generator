@@ -8,3 +8,28 @@ test('create a manager object', () => {
     expect(manager.email).toBe('mikesemail');
     expect(manager.officeNumber).toBe('43');
 });
+
+test('gets the managers name', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getName()).toBe('Mike');
+});
+
+test('gets the managers id', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getId()).toBe('43');
+});
+
+test('gets the managers email', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getEmail()).toBe('mikesemail');
+});
+
+test('gets the managers role', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getRole()).toBe('manager');
+});
+
+test('gets the managers office number', () => {
+    const manager = new Manager('Mike', '43', 'mikesemail', '43');
+    expect(manager.getOfficeNumber()).toBe('43');
+});
