@@ -27,7 +27,37 @@ const promptUser = function() {
             choices: ['Manager', 'Engineer', 'Intern']
         }
     ]).then(employeeInfo => {
-        console.log(employeeInfo);
+        if (employeeInfo.role === 'Manager') {
+            inquirer.prompt([
+                {
+                  type: 'input',
+                  name: 'officeNumber',
+                  message: 'Enter this managers office number!'
+                }]).then(officeNumber => {
+                    const member = new Manager(employeeInfo.name, '1', employeeInfo.email, officeNumber.officeNumber);
+                    console.log(member);
+                });
+        }  else if (employeeInfo.role === 'Engineer') {
+            inquirer.prompt([
+                {
+                  type: 'input',
+                  name: 'github',
+                  message: 'Enter this engineers github username!'
+                }]).then(github => {
+                    const member = new Engineer(employeeInfo.name, '1', employeeInfo.email, github.github);
+                    console.log(member);
+                });
+        } else if (employeeInfo.role === 'Intern') {
+            inquirer.prompt([
+                {
+                  type: 'input',
+                  name: 'school',
+                  message: 'Enter the school that this intern is attending!'
+                }]).then(school => {
+                    const member = new Intern(employeeInfo.name, '1', employeeInfo.email, school.school);
+                    console.log(member);
+                });
+        }
     });
 };
 
