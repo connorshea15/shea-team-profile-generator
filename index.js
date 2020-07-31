@@ -4,6 +4,14 @@ const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const inquirer = require('inquirer');
 
+// I may need a global array that holds list of created employees 
+
+// that way my if (continue), else (call print template function)
+
+// I can add new employees to the array and their id would just be
+
+// their index + 1
+
 
 
 // function to prompt the user
@@ -57,6 +65,10 @@ const promptUser = function() {
                     const member = new Intern(employeeInfo.name, '1', employeeInfo.email, school.school);
                     console.log(member);
                 });
+        }
+        // This is where my conditional statement will go which will either
+        // call the prompt user function again or call the create html function
+        
         }
     });
 };
