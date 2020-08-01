@@ -7,16 +7,6 @@ const generateHTML = require('./utils/generateHtml.js')
 
 var employeeList = [];
 
-// I may need a global array that holds list of created employees 
-
-// that way my if (continue), else (call print template function)
-
-// I can add new employees to the array and their id would just be
-
-// their index + 1
-
-
-
 // function to prompt the user
 const promptUser = function() {
 
@@ -87,8 +77,6 @@ const runAgain = function() {
                 return runApp();
             } else {
                  return generateHTML(employeeList);
-                // console.log("populate the html page!");
-                //function(employeeList);
             }
         });
 };
