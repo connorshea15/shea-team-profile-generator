@@ -3,6 +3,7 @@ const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const inquirer = require('inquirer');
+const generateHTML = require('./utils/generateHtml.js')
 
 var employeeList = [];
 
@@ -82,11 +83,12 @@ const runAgain = function() {
           default: false
         }]).then(yesOrNo => {
             if (yesOrNo.yesOrNo) {
-                console.log(yesOrNo);
-                console.log(employeeList);
+                // console.log(employeeList);
                 return runApp();
             } else {
-                console.log("populate the html page!");
+                 return generateHTML(employeeList);
+                // console.log("populate the html page!");
+                //function(employeeList);
             }
         });
 };
