@@ -3,7 +3,8 @@ const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const inquirer = require('inquirer');
-const generateHTML = require('./utils/generateHtml.js')
+const generateHTML = require('./utils/generateHtml.js');
+const writeHTML = require('./utils/writeHtml.js');
 
 var employeeList = [];
 
@@ -76,7 +77,7 @@ const runAgain = function() {
                 // console.log(employeeList);
                 return runApp();
             } else {
-                 return generateHTML(employeeList);
+                 return writeHTML(generateHTML(employeeList));
             }
         });
 };
