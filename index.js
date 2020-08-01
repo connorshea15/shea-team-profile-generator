@@ -48,10 +48,7 @@ const promptRole = function(employee) {
               message: 'Enter this managers office number!'
             }]).then(officeNumber => {
                 const member = new Manager(employee.name, (employeeList.length + 1), employee.email, officeNumber.officeNumber);
-                // console.log(member);
-                // return member;
                 employeeList.push(member);
-                // console.log(employeeList);
             });
     } else if (employee.role === 'Engineer') {
         return inquirer.prompt([
@@ -60,10 +57,8 @@ const promptRole = function(employee) {
               name: 'github',
               message: 'Enter this engineers github username!'
             }]).then(github => {
-                const member = new Engineer(employee.name, (employeeList.length + 1), employee.email, employee.github);
-                // return member;
+                const member = new Engineer(employee.name, (employeeList.length + 1), employee.email, github.github);
                 employeeList.push(member);
-                // console.log(employeeList);
             });
     } else if (employee.role === 'Intern') {
         return inquirer.prompt([
@@ -73,9 +68,7 @@ const promptRole = function(employee) {
               message: 'Enter the school that this intern is attending!'
             }]).then(school => {
                 const member = new Intern(employee.name, (employeeList.length + 1), employee.email, school.school);
-                // return member;
                 employeeList.push(member);
-                // console.log(employeeList);
             });
     }
 };
@@ -88,7 +81,8 @@ const runAgain = function() {
           message: 'Would you like to add another empoyee?',
           default: false
         }]).then(yesOrNo => {
-            if (yesOrNo) {
+            if (yesOrNo.yesOrNo) {
+                console.log(yesOrNo);
                 console.log(employeeList);
                 return runApp();
             } else {
