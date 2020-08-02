@@ -22,7 +22,7 @@ https://github.com/connorshea15/shea-team-profile-generator
 
 ## Link to WalkThrough Video
 
-https://drive.google.com/file/d/1ns_nzaqtm78-eIXJZfOWX14P4-9vRKmX/view
+https://drive.google.com/file/d/1BjNUpLIWK9wVwFgLTqHWWDCmUd_kuUEK/view
 
 ## Installation
 
